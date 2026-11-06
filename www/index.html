@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rehab Reality</title>
+<meta name="description" content="Rehab Reality – educational recovery screening and support app. Evidence-informed screening, AR health timeline, and verified support contacts.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- jsPDF – saved locally for offline/APK use; no CDN dependency -->
+<script src="lib/jspdf.umd.min.js"></script>
+</head><body>
+
+<div class="shell">
+  <aside class="rail" aria-label="Prototype navigation">
+    <div class="rbrand"><span id="rlogo"></span><div><b>Rehab Reality</b><span>See Your Future. Choose It.</span></div></div>
+    <p class="rnote">Interactive prototype with sample data. A photo you pick stays in this browser tab and is never uploaded.</p>
+    <div class="rgrp"><h4>Onboarding</h4><div>
+      <button class="rj" data-a="nav" data-r="splash">Splash</button><button class="rj" data-a="nav" data-r="login">Login</button><button class="rj" data-a="nav" data-r="setup">Profile setup</button></div></div>
+    <div class="rgrp"><h4>Core</h4><div>
+      <button class="rj" data-a="nav" data-r="home">Home</button><button class="rj" data-a="nav" data-r="scanIntro">Scan / Intake</button><button class="rj" data-a="nav" data-r="consent">Consent</button><button class="rj" data-a="nav" data-r="subSelect">Substance select</button><button class="rj" data-a="nav" data-r="questionnaire">Questionnaire</button><button class="rj" data-a="nav" data-r="screenResult">Screening result</button><button class="rj" data-a="nav" data-r="result">Severity result</button><button class="rj" data-a="nav" data-r="ar">AR future</button><button class="rj" data-a="nav" data-r="arEnhanced">AR Face Tracking</button><button class="rj" data-a="nav" data-r="track" data-s="track:dash">Tracker</button></div></div>
+    <div class="rgrp"><h4>Support</h4><div>
+      <button class="rj" data-a="nav" data-r="hub">Wellness hub</button><button class="rj" data-a="nav" data-r="hub" data-s="hub:coach">AI coach</button><button class="rj" data-a="nav" data-r="comm">Community</button><button class="rj" data-a="sos">SOS</button></div></div>
+    <div class="rgrp"><h4>Access</h4><div>
+      <button class="rj" data-a="nav" data-r="guardian">Guardian view</button><button class="rj" data-a="nav" data-r="settings">Settings</button><button class="rj" data-a="nav" data-r="family">Family mode</button></div></div>
+    <div class="seg" id="themeSeg"><button data-a="theme" data-v="light">Light</button><button data-a="theme" data-v="system">Auto</button><button data-a="theme" data-v="dark">Dark</button></div>
+    <button class="btn ghost sm" data-a="reset">Reset demo</button>
+    <p class="rtip">Try it: run the screening questionnaire, drag the divider in AR future, open the health education timeline.</p>
+  </aside>
+
+  <div class="phone" id="phone">
+    <div class="sbar"><span id="clock">9:41</span><i></i><span>5G</span></div>
+    <main class="view" id="view"></main>
+    <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
+    <button class="sosfab" id="sosfab" data-a="sos" hidden aria-label="SOS, get help now">SOS</button>
+    <div class="scrim" id="scrim" data-a="closeSheet" hidden></div>
+    <div class="sheet" id="sheet" role="dialog" aria-modal="true" hidden></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </div>
+</div>
+
+<!-- Core app (existing, unmodified structure) -->
+<script src="app.js"></script>
+<!-- Feature 1: Screening questionnaire, consent, results dashboard, PDF -->
+<script src="feature1.js"></script>
+<!-- Feature 2: Educational AR health timeline -->
+<script src="feature2.js"></script>
+
+</body></html>

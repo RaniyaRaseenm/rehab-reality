@@ -1,0 +1,18 @@
+{
+  "name": "rehab-reality",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rehab Reality - Capacitor Android wrapper",
+  "scripts": {
+    "setup": "bash setup.sh",
+    "sync": "cap sync android",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/share": "^8.0.3"
+  }
+}

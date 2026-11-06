@@ -1,0 +1,6 @@
+{
+  "appId": "com.rehabreality.app",
+  "appName": "Rehab Reality",
+  "webDir": "www",
+  "android": { "allowMixedContent": false }
+}
